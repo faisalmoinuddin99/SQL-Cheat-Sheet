@@ -1,15 +1,10 @@
 /*
-DDL Create Command - Hands on Exercise
+DML Insert Command - Hands on Exercise
 */
 
-CREATE TABLE Movie (
-movie_name VARCHAR2(255),
-movie_desc VARCHAR2(1000),
-release_date DATE,
-duration NUMBER(3),
-cover_photo_url VARCHAR2(500),
-trailer_url VARCHAR2(500),
-language VARCHAR2(20)
-); 
 
-desc movie ;
+insert into Customer(First_Name, Last_Name, Username, Password, Mobile_Number, Date_of_Birth) Values ('Niki', 'Tamboli', 'Nikki123', 'ben23', 8877445671, To_Date('12-11-97','DD-MM-YY'));
+insert into Customer(First_Name, Last_Name, Username, Password, Mobile_Number, Date_of_Birth) Values ('Vikas', 'Gupta', 'Vikas@675', 'vikkifacebook', 8877445672, To_Date('19-01-87','DD-MM-YY'));
+
+select * from Customer ;
+
