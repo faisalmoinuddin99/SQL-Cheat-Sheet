@@ -1,14 +1,15 @@
 /*
-Create Command - Hands on Exercise
+DDL Create Command - Hands on Exercise
 */
 
-CREATE TABLE Customer(
-first_name VARCHAR2(20),
-last_name VARCHAR2(20),
-username VARCHAR2(20),
-password VARCHAR2(20),
-mobile_number CHAR(10),
-date_of_birth DATE
-);
+CREATE TABLE Movie (
+movie_name VARCHAR2(255),
+movie_desc VARCHAR2(1000),
+release_date DATE,
+duration NUMBER(3),
+cover_photo_url VARCHAR2(500),
+trailer_url VARCHAR2(500),
+language VARCHAR2(20)
+); 
 
-Desc Customer ;
+desc movie ;
