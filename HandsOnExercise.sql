@@ -1,13 +1,14 @@
 /*
-CREATE Command - Hands on Exercise
+Create Command - Hands on Exercise
 */
 
-CREATE TABLE Movie (
-movie_name VARCHAR2(255),
-movie_desc VARCHAR2(1000),
-release_date DATE,
-movie_duration NUMBER,
-cover_photo_url BLOB,
-trailer_url VARCHAR2(500),
-languahe VARCHAR2(20)
+CREATE TABLE Customer(
+first_name VARCHAR2(20),
+last_name VARCHAR2(20),
+username VARCHAR2(20),
+password VARCHAR2(20),
+mobile_number CHAR(10),
+date_of_birth DATE
 );
+
+Desc Customer ;
