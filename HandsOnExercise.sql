@@ -10,8 +10,8 @@ insert into Movie ( Movie_Name, Movie_Desc, Release_Date, Duration, Cover_Photo_
 
 insert into Movie ( Movie_Name, Movie_Desc, Release_Date, Duration, Cover_Photo_Url, Trailer_Url, Language ) Values ( 'Dhoom-3', 'Dhoom 3 (transl. Blast 3) is a 2013 Indian Hindi-language action thriller film written and directed by Vijay Krishna Acharya and produced by Aditya Chopra,[6][7] It stars Aamir Khan, Abhishek Bachchan, Katrina Kaif and Uday Chopra. It is the third instalment of the Dhoom series and the sequel to Dhoom (2004) and Dhoom 2 (2006).', To_Date('20-12-13','DD-MM-YY'), 172, 'https://en.wikipedia.org/wiki/Dhoom_3#/media/File:Dhoom_3_Film_Poster.jpg', 'https://youtu.be/F3Ii35hqs_U', 'Hindi' ) ;
 
+select Movie_Name as movieName, Release_Date as Release, Duration, Language from Movie ;
 
-select * from Movie ;
 
 
 
