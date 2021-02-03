@@ -13,6 +13,13 @@ ADD column_name datatype
 
 */
 
+desc Movie ;
+
+/* Add Movie Producer in Movie Table */
+
+ALTER TABLE Movie
+ADD movie_Producer VARCHAR2(255) ;
+
 -- 2. Modify an existing column
 
 /*
