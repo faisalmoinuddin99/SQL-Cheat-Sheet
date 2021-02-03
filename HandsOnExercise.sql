@@ -1,86 +1,37 @@
 /*
- ALTER  DDL Command - Hands on Exercise
-*/
+We can also apply ALTER at TABLE level
 
+1. MODIFY a table name
 
--- 1. Add a new column to a table
-/*
-
-The syntax for this operation is as follow:
+The Syntax  for this operation is as follows:
 
 ALTER TABLE table_name
-ADD column_name datatype
-
+RENAME TO new_table_name ;T
 */
 
-desc Movie ;
+-- Renaming a table name
 
-/* Add Movie Producer in Movie Table */
+CREATE TABLE Theatre(
+theatre_name VARCHAR2(20),
+no_of_seats NUMBER(3)
+);
 
-ALTER TABLE Movie
-ADD movie_Producer VARCHAR2(255) ;
-
--- 2. Modify an existing column
+DESCRIBE Theatre ;
 
 /*
-The syntax for this operation is as follow:
-
-ALTER TABLE table_name
-MODIFY column_name datatype
-
-Renaming a column:
-
-ALTER TABLE table_name
-RENAME column_name datatype To new_name
-
+Column      	Null?	Type
+THEATRE_NAME	 -  	VARCHAR2(20)
+NO_OF_SEATS	 - 	        NUMBER(3,0)
 */
 
--- Update the column, change the type from VARCHAR2(255) to CHAR(20)
+ALTER TABLE Theatre
+RENAME TO movie_Theatre ;
 
-ALTER TABLE MOVIE
-MODIFY movie_Producer CHAR(20) ;
-
-DESCRIBE MOVIE ;
-
+DESCRIBE Theatre ; -- ERROR Theatre Table not exisit
+DESCRIBE MOVIE_THEATRE 
 /*
-Column	   Null?	Type
-MOVIE_NAME	 - 	VARCHAR2(255)
-MOVIE_DESC	 - 	VARCHAR2(1000)
-RELEASE_DATE	 - 	DATE
-DURATION	 - 	NUMBER(3,0)
-COVER_PHOTO_URL	 - 	VARCHAR2(500)
-TRAILER_URL	 - 	VARCHAR2(500)
-LANGUAGE	 - 	VARCHAR2(20)
-MOVIE_PRODUCER	 - 	CHAR(20)
+Column      	Null?	Type
+THEATRE_NAME	 -  	VARCHAR2(20)
+NO_OF_SEATS	 - 	        NUMBER(3,0)
 */
 
--- 3. Delete a column from a table
-
-/*
-The syntax for this operation
-
-ALTER TABLE table_name
-DROP COLUMN column_name ;
-*/
-
--- Drop the column
-
-ALTER TABLE MOVIE
-DROP COLUMN movie_producer ;
-
-DESCRIBE MOVIE
-
-
-/*
-OUTPUT :
-
-Column	    Null?   	Type
-MOVIE_NAME	 -  	VARCHAR2(255)
-MOVIE_DESC	 - 	    VARCHAR2(1000)
-RELEASE_DATE	 - 	DATE
-DURATION	 - 	    NUMBER(3,0)
-COVER_PHOTO_URL	 - 	VARCHAR2(500)
-TRAILER_URL	 -  	VARCHAR2(500)
-LANGUAGE	 -  	VARCHAR2(20)
-
-*/
