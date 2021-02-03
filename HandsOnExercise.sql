@@ -1,31 +1,14 @@
--- ADD ticket_price column in Movie_Theatre table
+-- Update the type of column ticket to NUMBER(5,2) -- number will be 5 digit long and upto 2 place of decimal
 
 ALTER TABLE MOVIE_THEATRE
-ADD ticket_price Number(3);
+MODIFY TICKET_PRICE NUMBER(5,2);
 
-DESCRIBE MOVIE_THEATRE
+DESC MOVIE_THEATRE
 
 /*
 Column	Null?	Type
 THEATRE_NAME	 - 	VARCHAR2(20)
 NO_OF_SEATS	 - 	NUMBER(3,0)
-TICKET_PRICE	 - 	NUMBER(3,0)
-*/
-
-
-
-
--- ADD Location Col
-
-ALTER TABLE MOVIE_THEATRE
-ADD location varchar2(255) ;
-
-/*
-Column	Null?	Type
-THEATRE_NAME	 - 	VARCHAR2(20)
-NO_OF_SEATS	 - 	NUMBER(3,0)
-TICKET_PRICE	 - 	NUMBER(3,0)
+TICKET_PRICE	 - 	NUMBER(5,2)
 LOCATION	 - 	VARCHAR2(255)
 */
-
-
