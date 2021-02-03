@@ -1,21 +1,38 @@
 /*
- UPDATE Command - Hands on Exercise
+ ALTER  DDL Command - Hands on Exercise
 */
 
 
-UPDATE Movie
-set Language = 'Hindi'; /* It will update all the rows with Hindi Language, so always use where clause with Update statement */
-
-select Language from Movie ;
+-- 1. Add a new column to a table
 /*
-Output: 
 
-LANGUAGE
+The syntax for this operation is as follow:
 
-Hindi
-Hindi
-Hindi
+ALTER TABLE table_name
+ADD column_name datatype
 
 */
 
+-- 2. Modify an existing column
 
+/*
+The syntax for this operation is as follow:
+
+ALTER TABLE table_name
+MODIFY column_name datatype
+
+Renaming a column:
+
+ALTER TABLE table_name
+RENAME column_name datatype To new_name
+
+*/
+
+-- 3. Delete a column from a table
+
+/*
+The syntax for this operation
+
+ALTER TABLE table_name
+DROP COLUMN column_name ;
+*/
