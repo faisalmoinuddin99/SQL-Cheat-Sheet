@@ -3,10 +3,19 @@
 */
 
 
-UPDATE  Movie 
-set Language = 'English'
-where Movie_Name = 'Dhoom-3';
+UPDATE Movie
+set Language = 'Hindi'; /* It will update all the rows with Hindi Language, so always use where clause with Update statement */
 
-select Movie_Name as Name, Language from Movie ;
+select Language from Movie ;
+/*
+Output: 
+
+LANGUAGE
+
+Hindi
+Hindi
+Hindi
+
+*/
 
 
