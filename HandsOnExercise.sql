@@ -24,5 +24,15 @@ ITEM_NUMBER	ITEM_NAME	ITEM_DESC	INVENTORY_COUNT
 2    	Apple	Apple is fruit	500
 */
 
+TRUNCATE TABLE Inventory ;
+
+/* Truncate is equals to Delete without equals */
+
+select * from Invenotry ;
+
+Desc Inventory
+
+
+
 
 
