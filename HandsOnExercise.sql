@@ -1,35 +1,28 @@
-/*
-Removal of record from the table
+CREATE TABLE Inventory(
+item_number CHAR(5),
+item_name   VARCHAR2(10),
+item_desc   VARCHAR2(50),
+item_count  NUMBER(5)
+);
 
-Note* If you don't use where clause with DELETE statement you may 
-accidentially delte all the records.
+DESC Inventory;
 
-*/
--- Delete record from the Customers table where customer name is Vikas
+INSERT INTO inventory values('1', 'Mango', 'Mango is fruit', 1000);
+INSERT INTO inventory values('2', 'Apple', 'Apple is fruit', 500);
 
-Select * from Customer;
-/*
-Before Delete Command
 
-FIRST_NAME	LAST_NAME	USERNAME	PASSWORD	MOBILE_NUMBER	DATE_OF_BIRTH
-Niki	Tamboli	Nikki123	ben23	8877445671	12-NOV-97
-Vikas   Gupta            viki123    9911224411  10-DEC-89
-Abhinav	Shukla	abhi654	abhparrot	9977445671	12-OCT-99
-Aly	Mirza	aly@675	ally	8877445671	20-DEC-17
-*/
+SELECT * FROM inventory
 
-Desc Customer ;
+-- Renaming the item_count Column to Inventory_count
 
-Delete from CUSTOMER
-where first_name = 'Vikas' ;
+ALTER TABLE Inventory
+RENAME COLUMN item_count TO inventory_count ;
 
 /*
-OUTPUT:
-
-After Delete Command
-
-FIRST_NAME	LAST_NAME	USERNAME	PASSWORD	MOBILE_NUMBER	DATE_OF_BIRTH
-Niki	Tamboli	Nikki123	ben23	8877445671	12-NOV-97
-Abhinav	Shukla	abhi654	abhparrot	9977445671	12-OCT-99
-Aly	Mirza	aly@675	ally	8877445671	20-DEC-17
+ITEM_NUMBER	ITEM_NAME	ITEM_DESC	INVENTORY_COUNT
+1    	Mango	Mango is fruit	1000
+2    	Apple	Apple is fruit	500
 */
+
+
+
