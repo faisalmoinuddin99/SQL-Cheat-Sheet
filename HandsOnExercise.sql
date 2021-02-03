@@ -35,6 +35,25 @@ RENAME column_name datatype To new_name
 
 */
 
+-- Update the column, change the type from VARCHAR2(255) to CHAR(20)
+
+ALTER TABLE MOVIE
+MODIFY movie_Producer CHAR(20) ;
+
+DESCRIBE MOVIE ;
+
+/*
+Column	   Null?	Type
+MOVIE_NAME	 - 	VARCHAR2(255)
+MOVIE_DESC	 - 	VARCHAR2(1000)
+RELEASE_DATE	 - 	DATE
+DURATION	 - 	NUMBER(3,0)
+COVER_PHOTO_URL	 - 	VARCHAR2(500)
+TRAILER_URL	 - 	VARCHAR2(500)
+LANGUAGE	 - 	VARCHAR2(20)
+MOVIE_PRODUCER	 - 	CHAR(20)
+*/
+
 -- 3. Delete a column from a table
 
 /*
