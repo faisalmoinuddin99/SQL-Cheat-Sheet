@@ -62,3 +62,25 @@ The syntax for this operation
 ALTER TABLE table_name
 DROP COLUMN column_name ;
 */
+
+-- Drop the column
+
+ALTER TABLE MOVIE
+DROP COLUMN movie_producer ;
+
+DESCRIBE MOVIE
+
+
+/*
+OUTPUT :
+
+Column	    Null?   	Type
+MOVIE_NAME	 -  	VARCHAR2(255)
+MOVIE_DESC	 - 	    VARCHAR2(1000)
+RELEASE_DATE	 - 	DATE
+DURATION	 - 	    NUMBER(3,0)
+COVER_PHOTO_URL	 - 	VARCHAR2(500)
+TRAILER_URL	 -  	VARCHAR2(500)
+LANGUAGE	 -  	VARCHAR2(20)
+
+*/
