@@ -8,7 +8,7 @@
 --               Credit the site oracletutorial.com explitly in your materials that
 --               use this sample database.
 --------------------------------------------------------------------------------------
--- disable FK constraints 
+-- disable FK constraint
 ALTER TABLE countries DISABLE CONSTRAINT fk_countries_regions;
 ALTER TABLE locations DISABLE CONSTRAINT fk_locations_countries;
 ALTER TABLE warehouses DISABLE CONSTRAINT fk_warehouses_locations;
